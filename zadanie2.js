@@ -1,12 +1,11 @@
-function dodajAktywne(elem) {
-    var li = document.getElementsByTagName('li')
-    for (i = 0; i < li.length; i++) {
-        li[i].classList.remove('nav-el-active')
-    }
-    elem.classList.add('nav-el-active');
-}
+const li = document.querySelectorAll(".nav-el");
 
-for (i = 0; i < this.length; i++){
+for (let el of li) {
+    el.addEventListener("click", e => {
+        e.preventDefault();
 
-    this.addEventListener("click", dodajAktywne(this));
-}
+        li.forEach(el => el.classList.remove("nav-el-active"));
+
+        el.classList.add("nav-el-active");
+    });
+};
