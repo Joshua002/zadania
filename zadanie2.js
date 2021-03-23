@@ -1,20 +1,12 @@
-const li = document.getElementsByClassName('nav-el');
+function dodajAktywne(elem) {
+    var li = document.getElementsByTagName('li')
+    for (i = 0; i < li.length; i++) {
+        li[i].classList.remove('nav-el-active')
+    }
+    elem.classList.add('nav-el-active');
+}
 
-function switchActive (evt){
+for (i = 0; i < this.length; i++){
 
-    let liActive = document.querySelectorAll('.nav-el-active');
-    for (i = 0; i < liActive.length; i++){
-        liActive[i].classList.remove('nav-el-active');
-    };
-
-    li.className += "nav-el-active";
-    
-    evt.preventDefault();
-};
-
-    
-for (i = 0; i < li.length; i++ ){
-    
-    li[i].addEventListener('click', switchActive, false);
-    
-};
+    this.addEventListener("click", dodajAktywne(this));
+}
