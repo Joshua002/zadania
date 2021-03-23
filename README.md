@@ -1,1 +1,1 @@
-No nie idzie to zadanko :(
+Git
